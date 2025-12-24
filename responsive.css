@@ -1,236 +1,358 @@
-/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
 
-/* Base styles */
-.container {
-    width: 100%;
-    /* base container utilities */
+/* ========================================
+   RESPONSIVE CSS SECTION - ADDED BELOW
+   All media queries for responsive design
+   ======================================== */
+
+/* ========================================
+   TABLET & SMALL DESKTOP (Max-width: 1200px)
+   ======================================== */
+@media (max-width: 1200px) {
+
+    /* Header adjustments */
+    header {
+        padding: 0 20px;
+    }
+
+    header ul {
+        width: 40%;
+        padding: 12px;
+    }
+
+    header ul a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+    .box {
+        gap: 20px;
+    }
+
+    /* Hero section */
+    .hero-info h1 {
+        font-size: 55px;
+        line-height: 60px;
+    }
+
+    /* Info section cards */
+    .info {
+        width: 90%;
+    }
+
+    .card-info {
+        grid-template-columns: auto auto;
+    }
+
+    .card:nth-child(3) {
+        grid-column: 1;
+        grid-row: span 1;
+        height: 40vh;
+    }
+
+    .card:nth-child(4) {
+        grid-column: span 2;
+    }
+
+    /* Projects section */
+    .myproject {
+        width: 90%;
+    }
+
+    .imgProject {
+        min-width: 300px;
+    }
+
+    /* Skills section */
+    .skillsBox h1 {
+        font-size: 40px;
+    }
+
+    .skillsBox p {
+        font-size: 16px;
+    }
+
+    .front,
+    .Back {
+        max-width: 250px;
+    }
 }
 
-/* Mobile styles */
-@media (max-width: 576px) {
-    .cont {
-        max-width: 100%;
-        margin-inline: 1rem;
+/* ========================================
+   TABLET (Max-width: 968px)
+   ======================================== */
+@media (max-width: 968px) {
+
+    /* Header */
+    header ul {
+        width: 50%;
+        padding: 10px;
     }
 
-    header {
-        padding: 0.75rem 1rem;
-        gap: 0.5rem;
+    .box {
+        gap: 15px;
     }
 
-    nav a {
-        margin-left: 0.75rem;
-        font-size: 0.95rem;
-    }
-
+    /* Hero */
     .hero {
         flex-direction: column;
-        margin-top: 40px;
-        align-items: center;
-        justify-content: center;
-        padding: 2.5rem 1rem;
         height: auto;
-        gap: 1.5rem;
+        padding: 100px 5% 40px;
+        gap: 50px;
     }
 
-    .hero-text {
+    .hero-info h1 {
+        font-size: 45px;
+        line-height: 50px;
         max-width: 100%;
-        text-align: center;
     }
 
-    .hero-text h1 {
-        font-size: clamp(1.75rem, 8vw, 2.75rem);
-        line-height: 1.05;
+    .hero-info p {
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 28px;
     }
 
-    .hero-text h3 {
-        font-size: 1rem;
+    .hero-image {
+        margin-top: 0;
+        justify-content: center;
     }
 
-    .hero-img img {
-        width: min(60vw, 260px);
-        border-radius: 16px;
+    .hero-image img {
+        max-width: 280px;
     }
 
-    .home_cv {
-        margin-left: 170px;
+    .scroll {
+        display: none;
     }
 
-    .about {
-        flex-direction: column;
-        gap: 1rem;
-        padding-inline: 1rem;
+    /* Info section */
+    .info {
+        width: 95%;
+        margin-top: 50px;
     }
 
-    .about img {
-        width: 80%;
-        max-width: 260px;
-        margin-inline: auto;
+    .title-info {
+        font-size: 32px;
     }
 
-    .serv_card {
-        width: 100%;
-        padding: 1.25rem;
-        border-radius: 1rem;
-    }
-
-    .grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .projects {
+    .card-info {
         grid-template-columns: 1fr;
-        gap: 1rem;
-        padding-inline: 1rem;
+        gap: 15px;
     }
 
-    .contact form {
-        margin-inline: 1rem;
-        width: auto;
+    .card:nth-child(3) {
+        height: 40vh;
     }
 
-    .home_cv {
-        right: 0.5rem;
-        bottom: 1rem;
-        width: 130px;
+    .card:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    .card h1 {
+        font-size: 20px;
+        bottom: 30%;
+    }
+
+    .card p {
+        font-size: 12px;
+        max-width: 90%;
+        bottom: 5%;
+    }
+
+    .card:nth-child(3) p,
+    .card:nth-child(4) p {
+        bottom: 5%;
+        max-width: 90%;
+    }
+
+    /* Projects section */
+    .myproject {
+        width: 95%;
+        height: auto;
+        margin-top: 100px;
+        margin-bottom: 400px;
+        gap: 80px;
+    }
+
+    .projectCard {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+
+    .imgProject {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .projectInfo {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .projectInfo h2 {
+        width: 100%;
+        max-width: 100%;
+        text-wrap: wrap;
+    }
+
+    .projectInfo p {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .projectInfo button {
+        width: 100%;
+    }
+
+    /* Skills section */
+    .skillsBox {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .skillsImage {
+        width: 90%;
+    }
+
+    .front,
+    .Back {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        max-width: 90%;
+        margin: 20px 0;
+    }
+
+    .skillsBox h1 {
+        font-size: 32px;
+    }
+
+    .skillsBox p {
+        font-size: 14px;
+    }
+
+    .slider {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 90%;
+        margin-top: 30px;
+    }
+}
+
+/* ========================================
+   MOBILE LARGE (Max-width: 768px)
+   ======================================== */
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    header .left h1 {
+        font-size: 20px;
+    }
+
+    header ul {
+        width: 60%;
         padding: 8px;
     }
 
-    .container {
-        width: 100%;
-        /* responsive styles for small screens */
+    header ul a {
+        font-size: 12px;
+    }
+
+    .box {
+        gap: 10px;
+    }
+
+    .box a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 80px 5% 40px;
+    }
+
+    .hero-info .hero-title {
+        width: 200px;
+        font-size: 13px;
+        padding: 6px 3px;
+    }
+
+    .hero-info h1 {
+        font-size: 35px;
+        line-height: 40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .hero-info p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .hero-info button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        max-width: 220px;
+    }
+
+    /* Info section */
+    .card {
+        height: 35vh;
+    }
+
+    .card:nth-child(3) {
+        height: 35vh;
+    }
+
+    .card h1 {
+        font-size: 18px;
+    }
+
+    /* Projects */
+    .myproject {
+        margin-top: 60px;
+        margin-bottom: 300px;
+    }
+
+    .projectInfo h2 {
+        font-size: 20px;
+    }
+
+    .projectInfo p {
+        font-size: 14px;
     }
 }
 
-/* Tablet styles */
-@media (min-width: 577px) and (max-width: 992px) {
+/* ========================================
+   MOBILE MEDIUM (Max-width: 640px)
+   ======================================== */
+@media (max-width: 640px) {
+
+    /* Container */
     .cont {
-        max-width: 920px;
-        margin-inline: 2rem;
+        gap: 60px;
     }
 
+    /* Header */
     header {
-        padding: 1rem 4%;
-    }
-
-    nav a {
-        margin-left: 1rem;
-        font-size: 1rem;
-    }
-
-    .hero {
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        padding: 3rem 2rem;
+        flex-wrap: wrap;
         height: auto;
-    }
-
-    .hero-text {
-        max-width: 55%;
-    }
-
-    .hero-text h1 {
-        font-size: clamp(2.25rem, 6vw, 3.5rem);
-    }
-
-    .hero-img img {
-        width: 300px;
-    }
-
-    .about {
-        gap: 2rem;
-        padding-inline: 2rem;
-    }
-
-    .about p {
-        width: 100%;
-    }
-
-    .serv_card {
-        width: 60%;
-    }
-
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
-    }
-
-    .contact form {
-        max-width: 500px;
-        margin-inline: auto;
-    }
-
-    .container {
-        max-width: 920px;
-        margin-inline: auto;
-        /* responsive styles for tablets */
+        padding: 10px 15px;
     }
 }
-
-/* Desktop styles */
-@media (min-width: 993px) {
-    .cont {
-        max-width: 1120px;
-        margin-inline: 2.5rem;
-    }
-
-    header {
-        padding: 25px 8%;
-    }
-
-    nav a {
-        margin-left: 2rem;
-        font-size: 1.05rem;
-    }
-
-    .hero {
-        height: 100vh;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 8%;
-    }
-
-    .hero-text {
-        max-width: 50%;
-    }
-
-    .hero-text h1 {
-        font-size: 60px;
-        /* original desktop size */
-    }
-
-    .hero-img img {
-        width: 350px;
-    }
-
-    .about {
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .serv_card {
-        width: 50%;
-    }
-
-    .projects {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-    }
-
-    .home_cv {
-        right: -2.5rem;
-        bottom: 2.5rem;
-    }
-
-    .container {
-        max-width: 1120px;
-        margin-inline: auto;
-        /* desktop-specific styles */
-    }
-}
-
-/* ==================== End Responsive Media Queries ==================== */
